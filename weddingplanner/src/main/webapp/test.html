@@ -6,6 +6,14 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(newEvent).toggle();
+    });
+});
+</script>
 </head>
 
 <body>
@@ -79,49 +87,59 @@
 </div>
 
 
-<form>
-<div>
-<label>Event Name:</label>
-<div class="input-group">
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-</div>
 
-<label>Budget Goal:</label>
-<div class="input-group"> 
-  <span class="input-group-addon">$</span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon">.00</span>
-</div>
+    
 
-<label>Start Date:</label>
-<div class="input-group"> 
-  <span class="input-group-addon"></span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon"></span>
-</div>
+    <div id="newEvent" style="margin-left: 200px; margin-right: 200px; float: center;">
+        <form >
+        <label>Event Name:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
 
-<label>Start Time:</label>
-<div class="input-group"> 
-  <span class="input-group-addon"></span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon"></span>
-</div>
+        <label>Budget Goal:</label>
+        <div class="input-group"> 
+          <span class="input-group-addon">$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon">.00</span>
+        </div>
 
-<label>End Date:</label>
-<div class="input-group"> 
-  <span class="input-group-addon"></span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon"></span>
-</div>
+        <label>Start Date:</label>
+        <div class="input-group"> 
+          <span class="input-group-addon"></span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon"></span>
+        </div>
 
-<label>End Time:</label> 
-<div class="input-group"> 
-  <span class="input-group-addon"></span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon"></span>
-</div>
-</div>
-</form>
+        <label>Start Time:</label>
+        <div class="input-group"> 
+          <span class="input-group-addon"></span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon"></span>
+        </div>
+
+        <label>End Date:</label>
+        <div class="input-group"> 
+          <span class="input-group-addon"></span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon"></span>
+        </div>
+
+        <label>End Time:</label> 
+        <div class="input-group"> 
+          <span class="input-group-addon"></span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-addon"></span>
+        </div>
+
+        </form>
+        </br>
+        
+    </div>
+    <div style="margin-left: 200px; margin-right: 200px; float: center;">
+      <button>Start a New Event</button>
+    </div>
+   
 
 </body>
 </html>
