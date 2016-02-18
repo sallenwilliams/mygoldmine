@@ -10,10 +10,15 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $(newEvent).toggle();
+        $("#newEvent").fadeToggle("slow");
     });
 });
 </script>
+<style>
+#newEvent {
+    display: none;
+}
+</style>
 </head>
 
 <body>
@@ -89,9 +94,11 @@ $(document).ready(function(){
 
 
     
+      <button>Start a New Event</button>
+    
 
     <div id="newEvent" style="margin-left: 200px; margin-right: 200px; float: center;">
-        <form >
+        
         <label>Event Name:</label>
         <div class="input-group">
           <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
@@ -132,14 +139,15 @@ $(document).ready(function(){
           <span class="input-group-addon"></span>
         </div>
 
-        </form>
-        </br>
         
     </div>
-    <div style="margin-left: 200px; margin-right: 200px; float: center;">
-      <button>Start a New Event</button>
-    </div>
-   
+
+<div class="page-header">
+  <h1>Your Current Events</h1>
+</div>
+    <p>Event 1</p></br>
+    <p>Event 2</p></br>
+   <p>Event 3</p>
 
 </body>
 </html>
