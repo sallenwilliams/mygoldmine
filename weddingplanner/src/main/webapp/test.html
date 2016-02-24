@@ -2,23 +2,48 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+ 
+
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/myCss.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script>
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <script>
+  
+ 
 $(document).ready(function(){
     $("button").click(function(){
         $("#newEvent").fadeToggle("slow");
     });
 });
 </script>
-<style>
-#newEvent {
+<script>
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
+</script>
+
+<style type="text/css">
+  #newEvent {
     display: none;
 }
+  #eventForm {
+   
+  }
+body {
+  padding: 20px 20px 20px 20px;
+}
+.mainContent {
+  width: 500px;
+ margin: 30px auto 0 auto;
+}
 </style>
+
+
 </head>
 
 <body>
@@ -63,30 +88,13 @@ $(document).ready(function(){
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+      
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 </div>
-
+<div class="mainContent">
 <div class="page-header">
   <h1>Let's Plan Your Next Event</h1>
 </div>
@@ -94,53 +102,42 @@ $(document).ready(function(){
 
 
     
-      <button>Start a New Event</button>
-    
-
-    <div id="newEvent" style="margin-left: 200px; margin-right: 200px; float: center;">
-        
-        <label>Event Name:</label>
-        <div class="input-group">
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        </div>
-
-        <label>Budget Goal:</label>
-        <div class="input-group"> 
-          <span class="input-group-addon">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-addon">.00</span>
-        </div>
-
-        <label>Start Date:</label>
-        <div class="input-group"> 
-          <span class="input-group-addon"></span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-addon"></span>
-        </div>
-
-        <label>Start Time:</label>
-        <div class="input-group"> 
-          <span class="input-group-addon"></span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-addon"></span>
-        </div>
-
-        <label>End Date:</label>
-        <div class="input-group"> 
-          <span class="input-group-addon"></span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-addon"></span>
-        </div>
-
-        <label>End Time:</label> 
-        <div class="input-group"> 
-          <span class="input-group-addon"></span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-          <span class="input-group-addon"></span>
-        </div>
-
-        
+<div id="eventForm"> 
+  <button>Start a New Event</button>
+    <div id="newEvent">
+      <div class="input-group">
+      <span class="input-group-addon">Event Name:</span>
+        <input type="text" class="form-control" placeholder="Event Name" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-addon"></span>
+      </div>
+      <div class="input-group"> 
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" placeholder="Budget Goal" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-addon">.00</span>
+      </div>
+      <div class="input-group"> 
+        <span class="input-group-addon">Start Date:</span>
+        <input type="text" class="form-control" placeholder="Start Date" id="datepicker">
+        <span class="input-group-addon"></span>
+      </div>
+      <div class="input-group"> 
+        <span class="input-group-addon">Start Time:</span>
+        <input type="text" class="form-control" placeholder="Start Time" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-addon"></span>
+      </div>
+      <div class="input-group"> 
+        <span class="input-group-addon">End Date:</span>
+        <input type="text" class="form-control" placeholder="End Date" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-addon"></span>
+      </div>
+      <div class="input-group"> 
+        <span class="input-group-addon">End Time:</span>
+        <input type="text" class="form-control" placeholder="End Time" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-addon"></span>
+      </div>
+      
     </div>
+</div>
 
 <div class="page-header">
   <h1>Your Current Events</h1>
@@ -148,6 +145,6 @@ $(document).ready(function(){
     <p>Event 1</p></br>
     <p>Event 2</p></br>
    <p>Event 3</p>
-
+</div>
 </body>
 </html>
